@@ -11,10 +11,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="product_category")
-@Data
+@Getter @Setter
 public class ProductCategory {
 	
 	@Id
@@ -27,4 +29,5 @@ public class ProductCategory {
 	
 	@OneToMany(cascade = CascadeType.ALL ,mappedBy = "category")
 	private Set<Product> products;
+	
 }
