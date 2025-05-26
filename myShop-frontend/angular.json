@@ -61,6 +61,14 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "localhost":{
+              "fileReplacements": [
+                {
+                  "replace": "src/assets/config/config.json",
+                  "with": "src/assets/config/config.localhost.json"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
