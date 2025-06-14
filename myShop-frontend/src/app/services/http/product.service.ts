@@ -35,6 +35,13 @@ export class ProductService {
       .get<GetResponse>(url)
       .pipe(map((resposne) => resposne._embedded.products));
   }
+
+  getProduct(theProductId: number) {
+
+    const url = `${this.baseUrl}/products/${theProductId}`
+
+    return this.httpClient.get<Product>(url);
+  }
 }
 
 interface GetResponse {
