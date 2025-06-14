@@ -8,12 +8,14 @@ import { ProductService } from './services/http/product.service';
 import { CoreServiceModule } from './services/core/core-service.module';
 import { AppRoutingModule } from './app.routing';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    ProductCategoryMenuComponent
+    ProductCategoryMenuComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

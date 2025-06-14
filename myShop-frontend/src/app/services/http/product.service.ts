@@ -28,6 +28,13 @@ export class ProductService {
       .get<GetResponseProductCategory>(url)
       .pipe(map((response) => response._embedded.productCategory));
   }
+
+  getProductListByName(name: string): Observable<Product[]> {
+    const url = `${this.baseUrl}/products/search/findByNameContaining?name=${name}`;
+    return this.httpClient
+      .get<GetResponse>(url)
+      .pipe(map((resposne) => resposne._embedded.products));
+  }
 }
 
 interface GetResponse {
