@@ -69,7 +69,8 @@
                   "replace": "src/assets/config/config.json",
                   "with": "src/assets/config/config.localhost.json"
                 }
-              ]
+              ],
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
